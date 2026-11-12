@@ -1,0 +1,70 @@
+.view-note-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.view-note-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.view-note-back {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+}
+
+.view-note-back:hover { color: #2563eb; }
+
+.view-note-header h1 { font-size: 28px; font-weight: 700; }
+
+.view-note-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.view-note-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  transition: all 0.2s;
+}
+
+.view-note-actions button:hover { background: #e2e8f0; }
+.view-note-actions button.delete:hover { background: #fee2e2; color: #dc2626; }
+
+.view-note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 24px;
+  padding: 12px 0;
+  border-top: 1px solid #e9edf4;
+  border-bottom: 1px solid #e9edf4;
+}
+
+.view-note-content {
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 12px 0;
+}

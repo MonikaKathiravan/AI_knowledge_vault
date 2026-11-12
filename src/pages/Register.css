@@ -1,0 +1,930 @@
+/*======================================
+        GOOGLE FONT
+=======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/*======================================
+        RESET
+=======================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "cambria", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eef3ff;
+  color: #222;
+}
+
+/*======================================
+        MAIN PAGE
+=======================================*/
+.register-page {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*======================================
+        LEFT PANEL
+=======================================*/
+.left-panel {
+  background: linear-gradient(135deg, #071426, #0b2d56, #1b63d8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background circles */
+.left-panel::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  top: -120px;
+  left: -120px;
+}
+
+.left-panel::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  bottom: -130px;
+  right: -100px;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo Area */
+.logo-area {
+  margin-bottom: 30px;
+}
+
+.logo-area h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.logo-area .tagline {
+  font-size: 16px;
+  color: #8fd3ff;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.overlay h2 {
+  color: #8fd3ff;
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.overlay > p {
+  font-size: 17px;
+  line-height: 32px;
+  color: #d9e7ff;
+  margin-bottom: 35px;
+}
+
+/*======================================
+        FEATURE LIST
+=======================================*/
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 22px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  transition: 0.35s;
+  cursor: default;
+}
+
+.feature:hover {
+  transform: translateX(8px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.feature span {
+  font-size: 30px;
+}
+
+.feature h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #cde3ff;
+  margin: 0;
+}
+
+/*======================================
+        STATISTICS
+=======================================*/
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px 15px;
+  text-align: center;
+  transition: 0.35s;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  color: #cde3ff;
+  font-size: 15px;
+  margin: 0;
+}
+
+/*======================================
+        STUDENT REVIEW
+=======================================*/
+.review-card {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px 28px;
+  backdrop-filter: blur(15px);
+  border-left: 5px solid #00d4ff;
+}
+
+.review-card p {
+  color: white;
+  font-size: 17px;
+  line-height: 30px;
+  font-style: italic;
+  margin: 0;
+}
+
+.review-card h4 {
+  margin-top: 14px;
+  color: #00d4ff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/*======================================
+        RIGHT PANEL
+=======================================*/
+.right-panel {
+  background: #f4f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* changed from 'center' to top-align */
+  padding: 30px 40px;
+  height: 100vh; /* full viewport height */
+  overflow-y: auto; /* enable scrolling on the panel itself */
+  position: sticky;
+  top: 0;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 620px;
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+  animation: slideUp 0.6s ease;
+  /* No max-height or overflow here anymore */
+}
+
+.register-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+.register-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.register-card::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*======================================
+        CARD HEADER
+=======================================*/
+.register-header h2 {
+  font-size: 32px;
+  color: #0b2d56;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.register-header p {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/*======================================
+        FORM
+=======================================*/
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/*======================================
+        SECTION TITLE
+=======================================*/
+.section-title {
+  font-size: 19px;
+  color: #0b2d56;
+  font-weight: 600;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  border-left: 5px solid #2563eb;
+  padding-left: 14px;
+}
+
+/*======================================
+        TWO COLUMN ROW
+=======================================*/
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/*======================================
+        INPUT GROUP
+=======================================*/
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/*======================================
+        INPUT BOX
+=======================================*/
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #d8e1f0;
+  border-radius: 14px;
+  background: white;
+  padding: 0 16px;
+  transition: 0.3s;
+}
+
+.input-box:hover {
+  border-color: #60a5fa;
+}
+
+.input-box:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 13px 10px;
+  font-size: 15px;
+  background: transparent;
+  color: #1f2937;
+}
+
+.input-box input::placeholder {
+  color: #9ca3af;
+}
+
+/*======================================
+        SELECT
+=======================================*/
+.input-group select {
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #d8e1f0;
+  outline: none;
+  font-size: 15px;
+  background: white;
+  color: #1f2937;
+  transition: 0.3s;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.input-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.input-group select option {
+  padding: 8px;
+}
+
+/*======================================
+        ICON
+=======================================*/
+.input-icon {
+  color: #2563eb;
+  font-size: 17px;
+  min-width: 20px;
+}
+
+/*======================================
+        EYE ICON
+=======================================*/
+.eye-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #6b7280;
+  transition: 0.3s;
+  padding: 4px;
+}
+
+.eye-icon:hover {
+  color: #2563eb;
+}
+
+/*======================================
+        PASSWORD STRENGTH
+=======================================*/
+.strength {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.weak {
+  height: 100%;
+  width: 30%;
+  background: #ef4444;
+  border-radius: 10px;
+}
+
+.medium {
+  height: 100%;
+  width: 65%;
+  background: #f59e0b;
+  border-radius: 10px;
+}
+
+.strong {
+  height: 100%;
+  width: 100%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/*======================================
+        PASSWORD RULES
+=======================================*/
+.password-rules {
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-top: 12px;
+}
+
+.password-rules p {
+  text-align: left;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.password-rules ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.password-rules li {
+  margin: 6px 0;
+  color: #6b7280;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.password-rules li.valid {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/*======================================
+        AI PREFERENCES
+=======================================*/
+.preferences {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.pref-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fbff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e5edf8;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.pref-item:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.pref-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.pref-item span {
+  user-select: none;
+}
+
+/*======================================
+        AGREEMENT
+=======================================*/
+.agreement-card {
+  margin-top: 12px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1.5px solid #dbeafe;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.checkbox-item:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin-top: 3px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.checkbox-item span {
+  line-height: 26px;
+  color: #374151;
+  font-size: 14px;
+}
+
+.checkbox-item a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.checkbox-item a:hover {
+  text-decoration: underline;
+}
+
+/*======================================
+        REGISTER BUTTON
+=======================================*/
+.register-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s;
+  margin-top: 6px;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+.register-btn:active {
+  transform: scale(0.98);
+}
+
+/*======================================
+        DIVIDER
+=======================================*/
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 18px 0 10px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.divider span {
+  padding: 0 20px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/*======================================
+        SOCIAL BUTTONS
+=======================================*/
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-buttons button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 13px;
+  border-radius: 14px;
+  border: 1.5px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2937;
+  transition: 0.3s;
+}
+
+.social-buttons button:hover {
+  background: #f9fafb;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.social-buttons img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.google-btn:hover {
+  border-color: #ea4335;
+}
+.github-btn:hover {
+  border-color: #333;
+}
+.microsoft-btn:hover {
+  border-color: #00a4ef;
+}
+
+/*======================================
+        SECURITY NOTE
+=======================================*/
+.security-note {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border-left: 5px solid #22c55e;
+  background: #ecfdf5;
+  color: #166534;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/*======================================
+        LOGIN LINK
+=======================================*/
+.login-text {
+  margin-top: 22px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.login-text a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/*======================================
+        ERROR
+=======================================*/
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+/*======================================
+        RESPONSIVE
+=======================================*/
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .register-page {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel {
+    padding: 40px 50px;
+    min-height: auto;
+  }
+
+  .right-panel {
+    padding: 30px 20px;
+  }
+
+  .register-card {
+    max-height: none;
+    padding: 32px 28px;
+  }
+
+  .overlay {
+    max-width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .left-panel {
+    padding: 30px 24px;
+  }
+
+  .right-panel {
+    padding: 20px 16px;
+  }
+
+  .register-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .logo-area h1 {
+    font-size: 30px;
+  }
+
+  .overlay h2 {
+    font-size: 22px;
+  }
+
+  .overlay > p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .register-header h2 {
+    font-size: 26px;
+  }
+
+  .features {
+    gap: 10px;
+  }
+
+  .feature {
+    padding: 12px 16px;
+    gap: 14px;
+  }
+
+  .feature span {
+    font-size: 24px;
+  }
+
+  .feature h4 {
+    font-size: 15px;
+  }
+
+  .feature p {
+    font-size: 13px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 16px 10px;
+  }
+
+  .stat-card h2 {
+    font-size: 24px;
+  }
+
+  .stat-card p {
+    font-size: 13px;
+  }
+
+  .review-card {
+    padding: 16px 18px;
+  }
+
+  .review-card p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .preferences {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pref-item {
+    padding: 10px 14px;
+  }
+
+  .agreement-card {
+    padding: 14px 16px;
+  }
+
+  .social-buttons button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .register-btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .security-note {
+    font-size: 13px;
+    padding: 14px 16px;
+  }
+
+  .input-box input {
+    padding: 11px 8px;
+    font-size: 14px;
+  }
+
+  .input-group select {
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 17px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .left-panel {
+    padding: 20px 16px;
+  }
+
+  .right-panel {
+    padding: 12px 10px;
+  }
+
+  .register-card {
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+
+  .logo-area h1 {
+    font-size: 24px;
+  }
+
+  .overlay h2 {
+    font-size: 18px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat-card h2 {
+    font-size: 20px;
+  }
+
+  .feature span {
+    font-size: 20px;
+  }
+
+  .register-header h2 {
+    font-size: 22px;
+  }
+}
